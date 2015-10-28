@@ -1,0 +1,16 @@
+{
+  "name": "basic-node-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tape ./test/backend-tests.js",
+    "start": "nodemon ./backend-js/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "shot": "^1.7.0",
+    "tape": "^4.2.2"
+  }
+}
