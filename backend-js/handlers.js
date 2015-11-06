@@ -11,13 +11,13 @@ handlers.home = function(req, res){
     res.end(index);
 }
 
-// handlers.file = function(req,res){
-//   console.log (req.url)
-//   var file = fs.readFileSync(__dirname + '/..' + req.url);
-//   var ext = (req.url).split('.')[1];
-//   res.writeHead(200, {"content-type" : "text/" + ext});
-//   res.end(file);
-// }
+handlers.file = function(req,res){
+  console.log (req.url)
+  var file = fs.readFileSync(__dirname + '/../public' + req.url);
+  var ext = (req.url).split('.')[1];
+  res.writeHead(200, {"content-type" : "text/" + ext});
+  res.end(file);
+}
 
 handlers.notFound = function(req, res){
     res.writeHead(404, headers);
